@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+
 import { AppSidebar } from "@/components/app-sidebar";
-import { cookies } from "next/headers";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,23 +15,18 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <SidebarProvider defaultOpen={defaultOpen}>
-          <AppSidebar />
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <SidebarTrigger />
-            {children}
-          </ThemeProvider>
-        </SidebarProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AppSidebar>{children}</AppSidebar>
+          <AnimatedThemeToggler />
+        </ThemeProvider>
       </body>
     </html>
   );
