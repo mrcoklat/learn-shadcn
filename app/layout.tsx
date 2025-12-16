@@ -25,7 +25,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <AppSidebar>{children}</AppSidebar>
-          <AnimatedThemeToggler />
+          <AnimatedThemeToggler duration={700} />
         </ThemeProvider>
       </body>
     </html>
