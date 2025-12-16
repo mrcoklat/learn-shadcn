@@ -76,7 +76,7 @@ export const AnimatedThemeToggler = ({
       ref={buttonRef}
       onClick={toggleTheme}
       className={cn(
-        "fixed bottom-4 right-4 z-50 p-2 rounded-full bg-background border shadow-md hover:shadow-lg transition-shadow",
+        "fixed bottom-4 left-4 z-50 p-2 rounded-full bg-background border shadow-md hover:shadow-lg transition-shadow",
         className
       )}
       {...props}
