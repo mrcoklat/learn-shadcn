@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
+import { Sidebar, SidebarBody, SidebarLink } from "@/components/navbar/sidebar";
 import {
-  IconArrowLeft,
-  IconBrandTabler,
-  IconSettings,
-  IconUserBolt,
+  IconHome,
+  IconBriefcase,
+  IconCode,
+  IconUser,
+  IconMail,
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -20,36 +21,43 @@ import {
   MobileNavToggle,
   NavbarLogo,
   NavbarButton,
-} from "@/components/ui/resizable-navbar";
+} from "@/components/navbar/resizable-navbar";
 
 export function AppSidebar({ children }: { children: React.ReactNode }) {
   const navItems = [
     {
-      name: "Dashboard",
+      name: "Home",
       link: "#",
       icon: (
-        <IconBrandTabler className="h-5 w-5 shrink-0 text-sidebar-foreground" />
+        <IconHome className="h-5 w-5 shrink-0 text-sidebar-foreground" />
+      ),
+    },
+    {
+      name: "Projects",
+      link: "#",
+      icon: (
+        <IconBriefcase className="h-5 w-5 shrink-0 text-sidebar-foreground" />
+      ),
+    },
+    {
+      name: "Skills",
+      link: "#",
+      icon: (
+        <IconCode className="h-5 w-5 shrink-0 text-sidebar-foreground" />
       ),
     },
     {
       name: "About",
       link: "#",
       icon: (
-        <IconUserBolt className="h-5 w-5 shrink-0 text-sidebar-foreground" />
+        <IconUser className="h-5 w-5 shrink-0 text-sidebar-foreground" />
       ),
     },
     {
-      name: "Setting",
+      name: "Contact",
       link: "#",
       icon: (
-        <IconSettings className="h-5 w-5 shrink-0 text-sidebar-foreground" />
-      ),
-    },
-    {
-      name: "Logout",
-      link: "#",
-      icon: (
-        <IconArrowLeft className="h-5 w-5 shrink-0 text-sidebar-foreground" />
+        <IconMail className="h-5 w-5 shrink-0 text-sidebar-foreground" />
       ),
     },
   ];

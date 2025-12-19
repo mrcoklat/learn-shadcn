@@ -1,5 +1,5 @@
-import HeroBackground from "@/components/HeroBackground";
+import Home from "@/app/sections/home";
 
-export default function Home() {
-  return <HeroBackground />;
+export default function Page() {
+  return <Home />;
 }

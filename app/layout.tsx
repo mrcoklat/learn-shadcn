@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
-import { AppSidebar } from "@/components/app-sidebar";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { AppSidebar } from "@/components/navbar/app-sidebar";
+import { AnimatedThemeToggler } from "@/components/theme/animated-theme-toggler";
 
 export const metadata: Metadata = {
   title: "Create Next App",

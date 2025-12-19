@@ -1,7 +1,7 @@
 "use client";
 
-import FloatingLines from "@/components/FloatingLines";
-import GridDistortion from "@/components/GridDistortion";
+import FloatingLines from "@/components/home/FloatingLines";
+import GridDistortion from "@/components/home/GridDistortion";
 import { useTheme } from "@/hooks/use-theme";
 
 export default function HeroBackground() {
