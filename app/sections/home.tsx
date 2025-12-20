@@ -10,11 +10,11 @@ export default function Home() {
       </div>
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
         <div>
-          <div className="text-4xl font-bold flex items-center gap-2 mb-5">
+          <div className="text-4xl font-bold flex items-center justify-start gap-2 mb-10">
             <span>I'm Ajimar, doing</span>
             <RotatingText
               texts={["Frontend", "Backend", "Full Stack", "Mobile"]}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+              mainClassName="w-50 px-2 sm:px-2 md:px-3 bg-cyan-300 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -33,8 +33,20 @@ export default function Home() {
             borderColor="purple"
             animationDuration={0.5}
             pauseBetweenAnimations={0.5}
-            className="text-xl"
+            className="text-xl mb-30"
           />
+          <div className="flex gap-6 pointer-events-auto">
+            <a href="#contact">
+              <button className="bg-foreground text-background px-6 py-2 rounded-full font-bold hover:bg-primary hover:text-primary-foreground transition duration-200 w-36">
+                Contact Me
+              </button>
+            </a>
+            <a href="#projects">
+              <button className="border border-foreground text-foreground px-6 py-2 rounded-full font-bold bg-transparent hover:bg-foreground hover:text-background transition duration-200 w-36">
+                Projects
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
