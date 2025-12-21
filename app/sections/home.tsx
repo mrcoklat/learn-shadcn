@@ -1,6 +1,6 @@
 import HeroBackground from "@/components/home/HeroBackground";
 import RotatingText from "@/components/home/RotatingText";
-import TrueFocus from "@/components/home/TrueFocus";
+import { PointerHighlight } from "@/components/home/pointer-highlight";
 
 export default function Home() {
   return (
@@ -11,8 +11,8 @@ export default function Home() {
       <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
         <div className="flex gap-8 items-center justify-center w-full">
           <div>
-            <div className="text-4xl font-bold flex items-center justify-start gap-2 mb-10">
-              <span>I'm Ajimar, doing</span>
+            <div className="mb-10 text-4xl font-bold flex items-center justify-start gap-2">
+              <span>I&apos;m Ajimar, doing</span>
               <RotatingText
                 texts={["Frontend", "Backend", "Full Stack", "Mobile"]}
                 mainClassName="w-50 px-2 sm:px-2 md:px-3 bg-chart-4 text-primary overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
@@ -26,16 +26,16 @@ export default function Home() {
                 rotationInterval={2000}
               />
             </div>
-            <TrueFocus
-              sentence="From paperwork_to_one-click operations."
-              separator="_"
-              manualMode={false}
-              blurAmount={5}
-              borderColor="purple"
-              animationDuration={0.5}
-              pauseBetweenAnimations={0.5}
-              className="text-xl mb-30"
-            />
+            <div className="mb-40 flex text-lg font-bold tracking-tight">
+              <span>From slow-motion paperwork to&nbsp;</span>
+              <PointerHighlight
+                rectangleClassName="bg-chart-4 border-foreground leading-loose"
+                pointerClassName="text-chart-4 h-3 w-3"
+                containerClassName="inline-block mr-1"
+              >
+                <span className="relative z-10">instant one-click.</span>
+              </PointerHighlight>
+            </div>
             <div className="flex gap-6 pointer-events-auto">
               <a href="#contact">
                 <button className="bg-foreground text-background px-6 py-2 rounded-full font-bold hover:bg-primary hover:text-primary-foreground transition duration-200 w-36">
