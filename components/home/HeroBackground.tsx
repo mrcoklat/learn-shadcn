@@ -1,6 +1,6 @@
 "use client";
 
-import LiquidEther from "@/components/home/LiquidEther";
+import PixelBlast from "@/components/home/PixelBlast";
 import GridDistortion from "@/components/home/GridDistortion";
 import { useTheme } from "@/hooks/use-theme";
 
@@ -8,22 +8,24 @@ export default function HeroBackground() {
   const theme = useTheme(); // "light" | "dark"
 
   return theme === "dark" ? (
-    <LiquidEther
-      colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
-      mouseForce={20}
-      cursorSize={100}
-      isViscous={false}
-      viscous={30}
-      iterationsViscous={32}
-      iterationsPoisson={32}
-      resolution={0.5}
-      isBounce={false}
-      autoDemo={false}
-      autoSpeed={0.5}
-      autoIntensity={2.2}
-      takeoverDuration={0.25}
-      autoResumeDelay={3000}
-      autoRampDuration={0.6}
+    <PixelBlast
+      variant="circle"
+      pixelSize={5}
+      color="#B19EEF"
+      patternScale={2.75}
+      patternDensity={1}
+      pixelSizeJitter={0}
+      enableRipples
+      rippleSpeed={0.4}
+      rippleThickness={0.12}
+      rippleIntensityScale={1.5}
+      liquid
+      liquidStrength={0.12}
+      liquidRadius={1.2}
+      liquidWobbleSpeed={5}
+      speed={1}
+      edgeFade={0.25}
+      transparent
     />
   ) : (
     <GridDistortion
