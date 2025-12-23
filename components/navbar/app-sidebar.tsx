@@ -85,7 +85,7 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <NavbarButton>Get Started</NavbarButton>
+          <NavbarButton>Contact Me</NavbarButton>
         </NavBody>
         <MobileNav>
           <MobileNavHeader>
@@ -108,7 +108,7 @@ export function AppSidebar({ children }: { children: React.ReactNode }) {
                 {item.name}
               </a>
             ))}
-            <NavbarButton className="mt-4">Get Started</NavbarButton>
+            <NavbarButton className="mt-4">Contact Me</NavbarButton>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
